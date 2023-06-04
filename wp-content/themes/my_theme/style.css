@@ -1,0 +1,279 @@
+/*!
+ * Theme Name: 		   my theme
+ * Text Domain: 	   oceanwp
+ * Version:            0.0.1
+ * Author:             tuan nguyen
+ * Theme URI:          https://hobo.ancorathemes.com/home-4/?fbclid=IwAR0jskaWKkMh5u0CVw8GMU7KZFeJv6e7ETc34mwGGAt9y25piDjiXl7yOq0
+ * Description:        theme cua tao ko y kien
+ * Tags:               two-columns, right-sidebar, footer-widgets, blog, news, custom-background, custom-menu, post-formats, rtl-language-support, sticky-post, editor-style, threaded-comments, translation-ready, buddypress, custom-colors, featured-images, full-width-template, theme-options, e-commerce, block-styles, wide-blocks, accessibility-ready
+ *
+ */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-size: 10px;
+}
+
+.container-fluid{
+    padding: 0;
+}
+.container{
+    padding: 0;
+}
+
+.header-page-child-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-page-child-top-social-list{
+    display: flex;
+    gap: 0 5px;
+    height: 100%;
+}
+.header-page-child-top-subscribe{
+    display: flex;
+    gap: 0 30px;
+    height: 100%;
+    align-items: center;
+}
+
+.header-page-child-top{
+    padding: 25px 0;
+}
+.header-page-child-top-social-item {
+    padding: 15px ;
+    display: inline-block;
+    background: #0f0f0f;
+    transition: background 0.3s  , color 0.3s ;
+
+}
+.header-page-child-top-social-item:hover {
+    background: #fff83f;
+}
+.header-page-child-top-social-item:hover i {
+    color: #0f0f0f;
+}
+
+.header-page-child-top-social-item i{
+    font-size: 15px;
+    color: #fff;
+}
+
+
+
+.header-page-child-top-subscribe span:nth-child(1) {
+    font-size: 25px;
+    position: relative;
+}
+.header-page-child-top-subscribe span:nth-child(1):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: #0f0f0f;
+    transition: width .5s ;
+}
+
+.header-page-child-top-subscribe span:nth-child(1):hover:after  {
+    width: 0;
+}
+
+
+.header-page-child-top-subscribe span:nth-child(2) {
+    padding: 15px;
+    background: #fff83f;
+    transition: background 0.3s , color 0.3s    ;
+}
+.header-page-child-top-subscribe span:nth-child(2):hover {
+    background: #0f0f0f;
+}
+.header-page-child-top-subscribe span:nth-child(2):hover i{
+    color: #fff;
+}
+
+
+
+
+.header-page-child-top-subscribe i{
+    font-size: 30px;
+}
+
+.header-page-child-top-cover{
+    border-bottom: 2px dashed #dadada;
+}
+
+.header-menu-page-child{
+    padding: 25px 15%;
+
+}
+.header-menu-page-child ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-menu-page-child ul a{
+    text-decoration: none;
+}
+
+
+.header-menu-page-child ul li{
+   list-style: none;
+    font-size: 25px;
+    color: #0f0f0f;
+}
+.header-menu-page-child ul li:hover{
+    color: #959595;
+}
+.header-menu-page-child ul li.active{
+    border-bottom: 3px solid #0f0f0f;
+}
+.header-menu-page-child ul li.active:hover{
+    color: #0f0f0f;
+}
+.header-menu-page-child-mobile{
+    display: none;
+}
+.header-page-child-img-main{
+    text-align: center;
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+.header-page-child-img-main h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+
+
+.header-page-child-img-main-breadcum{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+.header-page-child-img-main-breadcum span{
+    margin: 0 5px;
+}
+.header-page-child-img-main-breadcum span a{
+    color: #fff;
+}
+.header-page-child-img-main-breadcum span.active a{
+    color: #fff83f;
+}
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+    .header-page-child-top-social-list{
+        display: none;
+    }
+    .header-page-child-top{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header-page-child-top-subscribe span:nth-child(1) {
+        display: none;
+    }
+    .header-menu-page-child{
+        display: none;
+    }
+    /*Header mobile*/
+    .header-menu-page-child-mobile{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .header-menu-page-child-mobile label{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .header-menu-page-child-mobile span:nth-child(2){
+        margin-left: 15px;
+    }
+    /* Layer header menu page */
+    #header-menu-page-child-layer-checkbox:checked ~ .header-menu-page-child-mobile-layer{
+        transform: translateY(0px);
+    }
+
+    .header-menu-page-child-mobile-layer{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-1000px);
+        background: #0f0f0f;
+        transition: transform 0.5s;
+    }
+    .header-menu-page-child-mobile-layer-cover{
+        padding: 15px 25px;
+    }
+    .header-menu-page-child-mobile-layer-cover-item-close{
+        text-align: right;
+        display: block;
+    }
+    .header-menu-page-child-mobile-layer-cover-item-close i{
+        color: #fff;
+    }
+    .header-menu-page-child-mobile-layer-cover-content{
+        text-align: center;
+    }
+    .header-menu-page-child-mobile-layer-cover-content ul {
+        margin-top: 60px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px 0;
+    }
+    .header-menu-page-child-mobile-layer-cover-content ul li {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .header-menu-page-child-mobile-layer-cover-content-search-bar-cover{
+        padding: 0 18%;
+    }
+    .header-menu-page-child-mobile-layer-cover-content-search-bar{
+        display: flex;
+        justify-content: center;
+    }
+    .header-menu-page-child-mobile-layer-cover-content-search-bar-search input{
+        height: 100%;
+        font-size: 16px;
+        padding-left: 20px;
+        outline: none;
+    }
+    .header-menu-page-child-mobile-layer-cover-content-search-bar-icon span{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff83f;
+        padding: 20px;
+    }
+    .header-menu-page-child-mobile-layer-cover-content-search-bar-icon i{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+}
+
